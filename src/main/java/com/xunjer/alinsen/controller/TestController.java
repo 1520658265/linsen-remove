@@ -18,4 +18,9 @@ public class TestController {
         return "Hello Spring Boot";
     }
 
+    @RequestMapping(value = "text1",method = RequestMethod.GET)
+    public String hello1() {
+        return "Hello Spring Boot1";
+    }
+
 }
