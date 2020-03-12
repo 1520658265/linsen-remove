@@ -20,7 +20,7 @@ public class TestController {
 
     @RequestMapping(value = "text1",method = RequestMethod.GET)
     public String hello1() {
-        return "Hello Spring Boot1";
+        return "我是用来测试不需要输入密码的";
     }
 
 }
