@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+
+
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/alinsen?characterEncoding=utf-8&useSSL=true&serverTimezone=GMT
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      ####这个用来解决默认数据库命名为下划线
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
