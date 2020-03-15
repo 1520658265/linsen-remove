@@ -1,10 +1,12 @@
 package com.xunjer.alinsen.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Generated;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -30,9 +32,11 @@ public class AlinsenEvent {
     private String content;
 
     @Column(name = "createDate")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createDate;
 
     @Column(name = "eventDate")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date eventDate;
 
     @Column(name = "status")

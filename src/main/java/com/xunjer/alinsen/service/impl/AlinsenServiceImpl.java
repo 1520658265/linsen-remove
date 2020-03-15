@@ -20,8 +20,8 @@ public class AlinsenServiceImpl implements IAlinsenService {
     private AlinsenEventRepository alinsenEventRepository;
 
     @Override
-    public AlinsenEvent findById(Integer id) {
-        return alinsenEventRepository.getOne(id);
+    public AlinsenEvent findById(Integer eventId) {
+        return alinsenEventRepository.getByEventId(eventId);
     }
 
     @Override

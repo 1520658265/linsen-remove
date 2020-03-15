@@ -1,5 +1,6 @@
 package com.xunjer.alinsen.controller;
 
+import com.xunjer.alinsen.common.model.ResultModel;
 import com.xunjer.alinsen.entity.AlinsenEvent;
 import com.xunjer.alinsen.service.IAlinsenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,18 +23,13 @@ public class TestController {
     private IAlinsenService iAlinsenService;
 
     @RequestMapping(value = "text",method = RequestMethod.GET)
-    public String hello() {
-        return "Hello Spring Boot";
-    }
-
-    @RequestMapping(value = "text1",method = RequestMethod.GET)
-    public String hello1() {
-        return "我是用来测试不需要输入密码的";
+    public ResultModel<String> hello() {
+        return new ResultModel<>("Hello Spring Boot");
     }
 
     @RequestMapping(value = "get",method = RequestMethod.GET)
-    public AlinsenEvent hello11(Integer id) {
-        return iAlinsenService.findById(id);
+    public ResultModel<AlinsenEvent> hello11(Integer eventId) {
+        return new ResultModel<>(iAlinsenService.findById(eventId));
     }
 
     @RequestMapping(value = "getAll",method = RequestMethod.GET)

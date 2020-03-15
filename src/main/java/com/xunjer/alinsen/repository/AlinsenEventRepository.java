@@ -12,5 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AlinsenEventRepository extends JpaRepository<AlinsenEvent,Integer> {
 
+    AlinsenEvent getByEventId(Integer eventId);
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface IAlinsenService {
 
-    AlinsenEvent findById(Integer id);
+    AlinsenEvent findById(Integer eventId);
 
     List<AlinsenEvent> findAll();
 }
